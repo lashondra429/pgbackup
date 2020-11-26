@@ -27,5 +27,13 @@ def test_parser_with_driver_and_destination():
     parser=cli.create_parser()
 
     args=parser.parse_args([url, "--driver", "local", "/some/path"])
+    assert args.url == url
     assert args.driver=="local"
     assert args.destination=="/some/path"
+
+def test_parser_with_unknown_driver():
+
+    #The parser will exit if the driver is unknown
+    parser=cli.create_parser()
+    with pytest.raises(SystemExit):
+        parser.parse_args([url, "--driver", "azure", "destination"])
