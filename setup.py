@@ -12,12 +12,16 @@ setup(
 	author_email='tolliverl1@nku.edu',
 	packages=find_packages('src'),
 	package_dir={'':'src'},
-	install_requires=[]
-)
-
-install_requires=['boto3']
-entry_points={
+	#you can edit the following line with the new install_requires boto3 entry
+	install_requires=['boto3'],
+	entry_points={
 	'console_scripts':[
-		'pgbackup=pgback.cli:main'
+		'pgbackup=pgbackup.cli:main'
 	]
 }
+	#you need to define your entry point as a setup function parameter
+)
+
+# the following two lines should be required as parameters of setup function. You can replace the current install_required[] with the new one in your setup function
+# install_requires=['boto3']
+
