@@ -1,4 +1,5 @@
 README.rst
+setup.cfg
 setup.py
 src/pgbackup/__init__.py
 src/pgbackup/cli.py
@@ -7,4 +8,6 @@ src/pgbackup/storage.py
 src/pgbackup.egg-info/PKG-INFO
 src/pgbackup.egg-info/SOURCES.txt
 src/pgbackup.egg-info/dependency_links.txt
+src/pgbackup.egg-info/entry_points.txt
+src/pgbackup.egg-info/requires.txt
 src/pgbackup.egg-info/top_level.txt
